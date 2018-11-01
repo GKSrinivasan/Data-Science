@@ -1,0 +1,103 @@
+Day01:
+Arthur Samuel - 1959
+
+Git:https://github.com/sirajtechy
+Repository:ML-Python-OCTOBER
+nursnaaz
+
+strip() is used to remove the leading space
+
+Discriptive : Known data in description way
+
+Statistics:Collection,analysis,intrepret,present and organize
+
+Statistics : Descriptive (actual data),inferential (sample data)
+
+Characteristics of a frequency distribution:Modality,symmetry,central tandency,variability
+
+Box Jenkinies
+
+y=c+mx
+c-intrecept
+m-slope
+x=input
+y=model
+
+Logistic Regression : Categorical data
+Linear:
+General - centroid method
+Algebra
+Gradient descent : learning rate,partial derivative
+
+Metrix:
+Error Metirx : MSE (Mean Square Error)
+MAE = Mean Absolute Error
+RMSE = Regression Mean Square Error
+
+Categorical - numerical
+1.one hot encode (convert one column into 2 column)
+2.label encode (convert into same column)
+One Hot - Nominal (Male,Female)
+Label - Ordinal (Grade1,Grade2,Grade3)
+
+Decision Tree
+Root Node,Decision Node,Leave
+Root - Information gain,Gini Index
+
+Entropy = -p(x)logp(x)
+Information gain = Entropy of Target - Entropy of attribute
+
+Drawback of decision tree:
+1.More branch - Overfitting -high variency 
+	Overcome : HyperParameter	
+		   Pruning -Pre and Post Pruning
+
+Information - one have high entorpy
+Gini - one have low value will be on top
+
+Ensemble:
+Bagging,Boosting
+Bootstrap Aggregating - Bagging
+
+Boosting : Adaptive boosting
+
+
+Supervised:
+Regression - linear,decision,random forest,adabost
+Classification - Decision,random forest,adabost
+
+Un-Supervised: K-Mean
+step1:number of pattern
+step2:Random initailsation of 3 centroid'step3:
+step3:join reset to nearest centorid
+step4:take the average of all points of 3 pattern and find the new centroid
+step5:repeat 3 and 4 until the centroid become constant
+
+Use elbow curve to identity the K value(number of culster)
+Kmeans++ (to avoid the uncertainity in cluster)
+
+Scalling : MinMax Scalling (x-min)/(max-min)
+,Standard Scalling (x-mu)/signma
+
+Hierarchical Agglomerative : go for only low data
+Dendogram
+
+Support Vector Machine (SVM):
+wide margin which separate the first points on both side
+Support vectors
+htperplan
+C--(Soft margin)
+c++(hard margin)
+Kernel Trick
+
+
+Linear
+Logistic
+Decision
+Random
+Adaboost
+K-Mean
+Hierarchical
+SVM
+
+Pickle : Model to serialize

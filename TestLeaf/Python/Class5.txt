@@ -1,0 +1,4 @@
+1.objects: Example - Marker
+	-it as properties/attribute/variable : size,length,color
+	-it as function : write,draw
+2.Class is template or blueprint of an object

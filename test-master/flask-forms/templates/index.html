@@ -1,0 +1,175 @@
+{% extends 'bootstrap/base.html' %} {% import "bootstrap/wtf.html" as wtf %} {% block styles %} {{ super() }}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script> -->
+<script>
+  window.onload = function () {
+    if (localStorage.getItem('pval') != 'undefined') {
+      $("#name").val(localStorage.getItem('pval'))
+    }
+
+
+    var newdata = [];
+    if ($(".space-above strong").text() != " " || $(".space-above strong").text() != "  ") {
+      //testing='{"Connectivity Other Issue": "33.0", "Charging": "17.0", "Software / Firmware": "17.0"}'       
+      testing = $(".space-above strong").text().replace(' /', '')
+      //alert(testing)
+      testing = JSON.parse(testing)
+      //alert(testing)
+
+      $.each(testing, function (i, k) {
+        newdata.push({ y: k, label: i })
+
+
+
+      })
+    }
+    else {
+
+    }
+    var chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      title: {
+        text: ""
+      },
+      data: [{
+        type: "pie",
+        startAngle: 240,
+        yValueFormatString: "##0.00\"%\"",
+        indexLabel: "{label} {y}",
+        dataPoints: newdata,
+        click: onClick
+      }]
+    });
+    chart.render();
+
+    function onClick(e) {
+      $(".showdetails").hide('slow').show('slow')
+      var keyvalue = e.dataPoint.label
+      word_dict = $(".space-word").text().replace(' /', '')
+      var allJSons = JSON.parse(word_dict)
+      var todisplay = allJSons[keyvalue]
+      $(".showdetails").text(todisplay)
+      //alert(keyvalue)
+      //alert(todisplay)
+      //alert(allJSons)
+      //console.log(keyvalue)
+      //console.log(allJSons)
+
+
+    }
+
+  }
+
+  $(document).ready(function () {
+    $('#submit').on('click', function () {
+      $(".space-above strong").text();
+      var ipval = $("#name").val()
+      localStorage.setItem('pval', ipval)
+
+      //alert(ipval)
+    })
+
+    $(".btn-default").addClass('btn-danger')
+
+  })
+
+</script>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<style>
+  .hidewrp {
+    border: 0px solid red;
+    height: 50px;
+    background: white;
+    margin-bottom: 30px;
+    position: absolute;
+    width: 100%;
+    top: 280px;
+  }
+
+  .container {
+    width: 95%;
+    margin-top: 2%;
+  }
+
+  .showdetails {
+    display: none;
+    background-color: #e9e9f3;
+    width: 38%;
+    border-radius: 53px;
+    border: 1px solid #4f81bc;
+    font-size: 4rem;
+    word-break: break-word;
+    padding: 30px;
+
+    /* float: left; */
+    /* height: 20px */
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .space-word {
+    display: none;
+  }
+</style>
+
+
+{% endblock %} {% block title %} Topic Prediction {% endblock %} {% block content %}
+
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3>Classifiction of Reviews!</h3>
+    </div>
+    <div class="panel-body">
+
+      <div class="row">
+        <div class="col-xs-12">
+
+
+
+          <p class="lead">This is the page for prediting the classification using the Topic Modelling NMF Algorithm .</p>
+
+          {{ wtf.quick_form(form) }}
+
+          <p class="space-above"><strong>{{ message }}</strong></p>
+          <div class="space-word">{{ word }}</div>
+
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <div id="chartContainer" style="height: 400px; width: 70%;"></div>
+        </div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <!-- <div class='hidewrp'> </div> -->
+        <div class="col-md-4 showdetails">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+<!--
+TIPS about using Flask-Bootstrap:
+Flask-Bootstrap keeps the default Bootstrap stylesheet in the
+env/lib/python3.5/site-packages/flask_bootstrap/static/css/ directory.
+You can replace the CSS file. HOWEVER, when you reinstall requirements
+for your project, you would overwrite all the Bootstrap files
+with the defaults.
+Flask-Bootstrap templates are in
+env/lib/python3.5/site-packages/flask_bootstrap/static/templates
+Modifying the Bootstrap base.html template: use directives and
+Jinja2's super() function. See Jinja2 documentation and also this:
+https://pythonhosted.org/Flask-Bootstrap/basic-usage.html
+-->
+
+{% endblock %}

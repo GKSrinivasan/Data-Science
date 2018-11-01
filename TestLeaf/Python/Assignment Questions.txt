@@ -1,0 +1,20 @@
+28/08/2018 Assignments: 
+- 
+	1.Without using reverse function, write a Python code to reverse and print an array 
+
+	2.Write a logic to sum all the numbers of an array 
+
+	3.Write a logic to find and print the median of an array 
+example: input [1,7,2,6,10,2,5] , Output : 6
+
+	4.Write a logic to find and print the mode of an array, output : 2 
+
+	5.Write a logic to find average of an array of any size
+02/09/2018 Assignments Day-3 : 
+	1.Using list.count() function internally, Write a function to find a mode (most repeated value) of an given array. 
+
+	2.Write a function to find the max number in an array 
+
+	3.Write a function to find the min value in an array 
+
+	4.Write a function to find distinct value in an array

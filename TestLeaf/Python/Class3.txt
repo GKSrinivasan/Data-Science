@@ -1,0 +1,17 @@
+1.Data structures : list,set,dictionary,tuples
+2.Dictionary are like Json or hashmap
+3.SET will contian only unique values in unorder list
+4.Hashing?
+5.SET
+	A union B
+	A intersect B
+	A - B
+	B- A
+	A delta b (remove intersect value)
+6.Initialize set
+	a={1,2}  or  b= set([1,2]}  or  b=set() then b.add()
+7.How set removing duplicate values?
+8.array is mutual object and string,int,bool non-mutuable object
+9.set will accept oly immutuable object
+10.Tuples is immutuable data structure
+	s=(1,2,3) or s=tuple(1,2,3)

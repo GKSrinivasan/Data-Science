@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Topic and document browser</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+   
+   $(document).ready(function(){
+       $(".test").on('change',function(){
+           alert($(this).val())
+           if($(this).val()=='words'){
+            window.location.href= 'vocabulary.html'
+           }
+           else{
+            window.location.href='../topic/'+$(this).val()+'.html'
+           }
+           
+       
+       })
+   })
+
+   $(window).on('load',function(){
+
+
+    $('#navigation').show(2500)
+
+    setTimeout(() => {
+        $('topic-graph').show(2500)
+    $(".init").trigger('click')
+    }, 1000);
+ 
+  
+   })
+    </script>
+</head>
+<body>
+    <div id="navigation">
+        <select style="display:none;" onChange="window.location.href=((this.value == 'topics') ? 'topic_cloud.html' : 'vocabulary.html')">
+            <option selected="selected" disabled="disabled">Overview</option>
+            <option>topics</option>
+            <option>vocabulary</option>
+        </select>
+        -
+        <select class="test">
+            <option selected="selected" disabled="disabled">Details about a topic</option>
+            {% for i in topic_ids %}
+                <option>{{ i }}</option>
+            {% endfor %}
+            <option>words</option>
+        </select>
+    </div>
+    <div id="header">
+        <h1>Topic and document browser</h1>
+        <!--<a href="https://github.com/AdrienGuille/TopicModeling">Built with https://github.com/AdrienGuille/TopicModeling</a>-->
+    </div>
+</body>

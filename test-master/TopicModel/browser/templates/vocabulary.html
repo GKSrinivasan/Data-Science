@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Vocabulary</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script>
+       
+        $(document).ready(function(){
+            $(".test").on('change',function(){
+             //   alert($(this).val())
+                if($(this).val()=='words'){
+                 window.location.href= 'vocabulary.html'
+                }
+                else{
+                 window.location.href='../topic/'+$(this).val()+'.html'
+                }
+                
+            
+            })
+        })
+     
+        $(window).on('load',function(){
+     
+     
+         $('#navigation').show(2500)
+     
+         setTimeout(() => {
+             $('topic-graph').show(2500)
+         $(".init").trigger('click')
+         }, 1000);
+      
+       
+        })
+         </script>
+</head>
+<body>
+    <div id="navigation">
+        <select style="display:none;" onChange="window.location.href=((this.value == 'topics') ? 'topic_cloud.html' : 'vocabulary.html')">
+            <option selected="selected" disabled="disabled">Overview</option>
+            <option>topics</option>
+            <option>vocabulary</option>
+        </select>
+        -
+        <select class="test"> 
+            <option selected="selected" disabled="disabled">Details about a topic</option>
+            {% for i in topic_ids %}
+                <option>{{ i }}</option>
+            {% endfor %}
+            <option>words</option>
+        </select>
+    </div>
+    <div id="header">
+        <h1>Vocabulary</h1>
+        Number of words : {{ vocabulary_size }}
+    </div>
+    <div id="wrap">
+    {% for vocabulary in splitted_vocabulary %}
+        <div id="five_columns">
+            <ul>
+                {% for indexed_word in vocabulary %}
+                    <li><a href="word/{{ indexed_word[0] }}.html">{{ indexed_word[1] }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+    </div>
+</body>

@@ -1,0 +1,12 @@
+1.Modules
+	import Math : Math.add()
+	from Math import add,sum : add()
+	from Math import * : get everything from math and put in local file.
+				which will populte the  current file
+
+2.Threads
+	Create - runable - running -dead
+
+3.Numpy - Numerical python
+4.Pandas - series,dataframe,panels
+5.Regex

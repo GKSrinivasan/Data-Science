@@ -1,0 +1,54 @@
+1.Variables
+	In this the variables are ref to value not a location. Which means if two variable have same value means it ref to single location which contains the value 1.
+2.If else
+	Logic same as C#. 
+	Define condition without brackets
+	Use 4 space instend of {}
+	Condition as end with :
+3.Function
+	Declare function with keyword def (Define function).No {} use 4 Spaces.Logics are same as C#
+	append : at the end of function name
+4.List
+	Array contains all types of data type.
+	1 dimensional array itselft contains numeric,string and array also
+	Use append() function to add value to an array
+	Use pop() function to remove the last value of the array
+	We can swap the value of the elements in array using temp variable or based on array index also.
+		Ex : b[0], b[2] = b[2], b[0]
+		Which means b[2] value assigned to b[0] similarly b[0] value assigned to b[2]
+	Array index starts from 0
+	If a array or list going to contaion a continous number like 1-100 no need to define entire number in array. We can use range(1, 101) it starts from 1 and end 101-1=100.
+		It will give you the range.To convert it into a list use list(range(1, 101)).
+5.Loop
+	For loop in python is like C# foreach 
+	End of condition will have :
+	4 space are used to spilt the region
+	for i in x:
+	    print(i)
+6.While loop and break
+	We can find the length array by using len() function like len(array name)
+	Logical operator are like sql and or
+	Boolean Value like True False
+7.More about loop
+	Nothing new in this
+8.Dictionary
+	It is kind of temp table. used to store key value pair
+	We declare dictionary by d = {} or d=dict() or d={"Key1":value1, "Key2":values=2}
+	Value may be of any type
+	Key will be either string or int
+	Iterate dictionary in python 3.x
+		for key, value in d.items():
+9.Class
+	Declare a class like Class NameofClass:
+	With in the class the function will contain a default parameter self (like this key in other language) to access class objects.
+	We can define constructor by (2 underscore)__init__(2 underscore) 
+	init is a key word we are not able to change it.
+10.Class and object
+	integer : int
+	string  : str
+	boolean : bool
+11.Using boolean
+	we can use type() to find the data type
+		Example type(1) or type("name") or type('name') or type(True)
+	we have to use (not) in python like (!) in c#
+		Example if a>b and not b>c

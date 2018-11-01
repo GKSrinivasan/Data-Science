@@ -1,0 +1,122 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+    window.onload = function() {
+      if( localStorage.getItem('pval')!='undefined'){
+        $("#name").val(localStorage.getItem('pval'))
+      }
+     
+
+    var newdata=[];
+      if($(".space-above strong").text()!=" "|| $(".space-above strong").text()!="  "){
+        //testing='{"Connectivity Other Issue": "33.0", "Charging": "17.0", "Software / Firmware": "17.0"}'       
+        testing= $(".space-above strong").text().replace(' /','')
+        console.log(testing)
+        testing=JSON.parse(testing)
+        console.log(testing)
+        
+        $.each(testing,function(i,k){
+          newdata.push({y:k,label:i})
+// alert(i)
+// alert(k)
+        })
+      }
+      else{
+   
+      }
+    var chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      title: {
+        text: ""
+      },
+      data: [{
+        type: "pie",
+        startAngle: 240,
+        yValueFormatString: "##0.00\"%\"",
+        indexLabel: "{label} {y}",
+        dataPoints:  newdata
+      }]
+    });
+    chart.render();
+    
+    }
+
+$(document).ready(function(){
+  $('#submit').on('click',function(){
+    $(".space-above strong").text();
+    var ipval=$("#name").val()
+    localStorage.setItem('pval',ipval)
+   // alert('hi')
+  })
+
+})
+
+    </script>
+ 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <style>
+      .hidewrp{
+       border: 0px solid red;
+   height: 50px;
+   background: white;
+   margin-bottom: 30px;
+   position: absolute;
+   width: 100%;
+   top: 280px;
+      } 
+</style>
+ 
+
+{% endblock %}
+
+
+{% block title %}
+Topic Prediction
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+  
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h1>Classifiction of Reviews!</h1>
+
+      <p class="lead">This is the page for prediting the classification using the Topic Modelling NMF Algorithm .</p>
+
+      {{ wtf.quick_form(form) }}
+
+      <p class="space-above"><strong>{{ message }}</strong></p>
+      <div class="space-word">{{ word }}</div>
+
+
+    </div>
+  </div>
+  <div class="row">
+      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<!-- <div class='hidewrp'> </div> -->
+</div>
+</div>
+
+<!--
+TIPS about using Flask-Bootstrap:
+Flask-Bootstrap keeps the default Bootstrap stylesheet in the
+env/lib/python3.5/site-packages/flask_bootstrap/static/css/ directory.
+You can replace the CSS file. HOWEVER, when you reinstall requirements
+for your project, you would overwrite all the Bootstrap files
+with the defaults.
+Flask-Bootstrap templates are in
+env/lib/python3.5/site-packages/flask_bootstrap/static/templates
+Modifying the Bootstrap base.html template: use directives and
+Jinja2's super() function. See Jinja2 documentation and also this:
+https://pythonhosted.org/Flask-Bootstrap/basic-usage.html
+-->
+
+{% endblock %}
