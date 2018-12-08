@@ -1,0 +1,62 @@
+Statistics
+	Descriptive - performaning operation on past data
+			Mean,Median,Mode
+			std/variance
+			Range
+			Frequency Distribution
+	Inferential - based on sample calculate the entire thing
+			Population vs sample
+
+Variables
+	Qualitative
+		Nominal
+		Ordinal
+	Quantitative
+		Discrete
+		Continuous
+
+Dependent - Target Variable
+Independent - Rest of variable
+
+Plot : X-Independent Variable, Y-Dependend
+
+Frequency Distribution
+	Modality
+		Unimodal
+		Bimodal
+	Symmetry
+		Symmetric
+		ASymmetric
+	Central Tendency
+		Mean
+		Median
+		Mode
+	Variability
+
+Dispersion
+	Range
+	variance (x-u)**2/n
+	standard deviation
+	Mean Absolute deviation
+	Interquartile Range
+
+Percentile & Quartile
+	Percentage : calculate out of 100
+	Percentile : calculate out of number of record
+	Quartile : Q1,Q2,Q3
+
+Outlier = +_ 1.5 IQR (Inter Quartile Range) 
+		IQR = Q1 and Q3
+
+Covariance = (x-x1)(y-y1)/n
+Correlation = Covariance /s1*s2
+	Positive Correlation
+	Negative Correlation
+	No Correlation
+
+Data Visualization
+1.Box plot
+2.Scatter plot
+3.Density plot
+
+	

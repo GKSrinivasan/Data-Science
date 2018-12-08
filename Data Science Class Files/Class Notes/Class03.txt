@@ -1,0 +1,7 @@
+1.How Io Create Numpy array
+	np.array([])
+2.Access numpy array
+3.modify 
+4.delete
+5.add
+6.methods

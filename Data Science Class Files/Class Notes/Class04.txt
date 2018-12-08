@@ -1,0 +1,10 @@
+Pandas
+1.Series 
+2.Dataframe
+
+Numpy is like an array (hold only one data type)
+Pandas is kind of list (hold different types of data)
+
+Axis:
+Numpy  - 0 Rows    1 Columns 
+Pandas - 0 Columns 1 Rows
