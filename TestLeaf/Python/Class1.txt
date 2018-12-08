@@ -1,4 +1,0 @@
-1.Compilation lang
-2.Interpretor lang (require more unit testing)
-3.Unit test focused on code coverage
-4.Data types are needed for memory allocation of variable

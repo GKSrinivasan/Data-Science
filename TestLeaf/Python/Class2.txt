@@ -1,9 +1,0 @@
-1.Mean,median and mode - measure of centeral tendency
-2.Key word to define a function in python is def
-3.Arrays: will have contigues (adjusted) memory location for easy to access
-	python as only have list in the form of array
-	Type of arrays : a=[1,2,3,4] or range(1,5) or a=list(1,2,3) or
-			 a=list() then a.append(1) a.append(2)
-4.append() and extend() modify the same array only it will not return anything
-5.array[start:stop:strip] start : start index , stop: end index, strip: increament the index by strip
-6.copy an array by : array.copy() or array[::]

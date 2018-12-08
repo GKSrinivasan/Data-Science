@@ -1,3 +1,0 @@
-1.Their is no overloading in python
-2.Inheritance - Reuse the code
-	syntax to inheritance class B(A):
