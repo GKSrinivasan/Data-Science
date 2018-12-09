@@ -1,0 +1,40 @@
+Machine Learning
+	Supervised - Their is some target
+		Regression
+		Classification
+	Unsupervised - No target element 
+	Re-enforcement
+
+Supervised : Regression
+	Linear
+	Logistic
+	Randam forest
+	Dession tree
+	SVM
+	Ensembiling
+	K-Mean
+
+Linear regression : Find the line of best fill
+	Dependant - Target - Output
+	Independant - Predictor - Input
+	y=mx+c
+	y-Dependant
+	x-Independant
+	m-slope ( Changes the direction of the line)
+	c-Intrespet (Changes the height of the line)
+
+Mean Square Error = 1/N Sum of ((y-y^)**2)
+
+Go for polnomial regression if the data set is not linear
+
+1.Batch gradient Descent
+	Mini-Batch gradient descent
+2.Stochastic gradient descent
+Encoding - Convert the categorical(string) data into numerical data
+
+EDA - Exploring Data analysis
+
+Regression Metrix
+MSE - Mean square Error
+RMSE - Root of mean square error
+MAPE - Mean apsolute percentage error
