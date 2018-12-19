@@ -1,0 +1,21 @@
+SSE : Sum of Square Error
+SSR : Sum of square of residual
+SST : Sum of Square of Total
+
+R2 : Will keep on increase based on add information
+Adjusted R2: will increase when the added information contribute to prediction 
+		will drecrease in wise other scenorio
+
+Bias Variance  Trade Off
+-Under fitting (High Bias)
+-Over fitting (High Variance)
+
+Cost function:MSE
+
+Linear Regression
+Assumptions:
+1. Linearity
+2.No Multi-Collinearity (Avoid more correlation in independent variable)
+3.Variance in the residual should be equal
+4.predicted value should not have dependency between reach other.
+	Example : 10 value depented on 9th value.

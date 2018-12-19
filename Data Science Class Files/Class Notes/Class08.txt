@@ -1,0 +1,22 @@
+1.Encoding : 
+	One hot encoding
+	Label encoding (Alternate pandas.getdummies will convert the
+		row data into column with 0 and 1)
+
+Percential = (.3)->percential
+		.3N = will give the 30th percential
+
+2.Outlier
+	IQR = Q1-Q3
+	+-1.5 IQR
+		(or)
+	using standardizing also used to find outlier
+3.Imputation (Imputer package in SKlearn for replace nan or null)
+4Transformation : 
+	Normalizing data (0 to 1)
+		min max scalar 
+			x-xmin/xmax-xmin
+	Standardizing data (-3 to 3)
+		z=(x-mu)/sigma
+5.RFE : Recursive Feature Engineering 
+		To find the importance of column 
