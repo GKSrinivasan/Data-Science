@@ -1,0 +1,33 @@
+Logistics Regression:
+	Find the probability for linear model to convert linear 
+into categorical.
+
+Terminologies:
+Linear : -infinite to +infinite
+Take negative exponential to make the range between 0 to +infinite
+Divide the number by (number+1) to make the range 0 to 1
+odds : winning/lossing or (ratio of winning probability / lossing probability)
+log of odds : log(p/1-p) to make logic function
+probality : winning/total numer of match
+
+sigmoid function is used to convert linear to probability data
+
+1.Linear data
+2.Take exponential
+3.Find probability (1/(1+e**-y)) --> sigmoid function
+
+logistic Cost Function : log loss function
+
+Metrics:
+1.Confusion
+
+Types of error:
+	Flase Positive
+	Flase Negative
+Accuracy Tp+TN/All
+True Positive rate or Recall or sensitivity (TPR) = Tp/TP+FN
+FPR=FP/TN+FP
+Precision = TP/TP+FP
+
+ROC (Recevior Operating Curve) Curve : (sensitivity or TPR or Recall) vs (Specificity or TNR)
+

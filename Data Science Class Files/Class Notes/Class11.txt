@@ -1,0 +1,12 @@
+1.RFE - Random feature elimination
+2.ROC (Only for classification)
+3.Unbalanced dataset
+	Over Sampling
+	Under Sampling
+4.Cross Validation
+
+KNN : K-Nearest Neighbors
+	It is better to feature scaling (standarize) the data.
+
+K-Means: (Unsupervised)
+	

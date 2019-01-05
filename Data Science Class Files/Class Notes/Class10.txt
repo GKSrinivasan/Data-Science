@@ -1,0 +1,35 @@
+Decision Tree (or) CART [Classification and regression tree]
+
+Root Node
+Decision Node
+Leaves
+
+How to find root node?
+Information gain
+Gini index
+
+Infromation gain:
+Entropy or Randomness
+	- The messure of uncertainty
+
+0.2268+0.9408
+
+Decision Tree disadvantage overfitting when their are more column:
+
+to solve overfitting:
+	Pruning - Pre-pruning - cutting the tree before bulid
+		  Post-pruning - cutting after complete bulid
+	Other algorithm
+
+Ensemble:
+	Bagging (Bootstrap Aggrecation) - Random Forest
+		Parallel running
+		Bootstrap Sampling:
+			No need to split the train and test it will automatically perform the operation
+	Boosting
+		Serious running
+		input result of one model to other model
+		weight of correct and incorrect should be equal 
+	Stacking
+		Boosting+over all model operation
+

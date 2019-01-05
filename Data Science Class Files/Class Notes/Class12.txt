@@ -1,0 +1,6 @@
+SVM : Support Vector Machine (Supervised)
+Kernals : Linear,Polynomial and RBF (Radial Bias Function)
+
+Regularization : (To avoid over fitting in Linear model)
+	Lasso (L1 Regression)
+	Ridge (L2 Regression)
